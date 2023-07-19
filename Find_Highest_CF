@@ -1,15 +1,26 @@
 // 1   Find the highest common factor for a given array of integers
 
 class HCF{
-public static int getHCF(int[] numbers) {
-int hcf=numbers[0];
-    for (int i = 0; i < arr.length; i++) {
-        hcf = getHCF(hcf, arr[i]);
-    }
+// to iterate the array elements
+    public static int getHCF(int numbers[]) {
+     int hcf=numbers[0];
+     for (int i = 1; i < numbers.length; i++) {
+     hcf = getHCF(hcf, numbers[i]);
+  }
     return hcf;
 }
-
+// actual division will occur
+public static int getHCF(int a, int b){
+    int temp;
+    while(b!=0){
+        temp=b;
+        b=a%b;
+        a=temp;
+    }
+    return a;
+}
 public static void main(String args[]){
   int a[]={2,4,6};
   System.out.println(getHCF(a));
+}
 }
