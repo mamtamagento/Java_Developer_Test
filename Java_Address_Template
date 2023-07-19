@@ -1,1 +1,57 @@
 
+
+public class Address
+{
+	private String line_details;
+	private String city;
+	private String state;
+	private String country;
+  private String province;
+  private int postal_code;
+
+	/**Constructor creates an address using four parameters
+	public Address(String line_details, String city, String state, String country,String province, int postal_code)
+	{
+		line_details = line_details;
+		city = city;
+		state = state;
+		country = country;
+    province= province;
+    postal_code=postal_code;
+	}
+// appropriate getters and setters will be included 
+	/**toString method returns information about the address
+	@return all imformation about the address*/
+	public String toString()
+	{
+		return (line_details + ", " + city + ", " + state + " " + country + " " +province + " " +postal_code);
+	}
+}
+
+//  b.       Write a function to pretty print all the addresses in the attached file
+class AddressRead{
+
+public static void main (String args[]){
+// Mention filePath from where we have to read list of address in file
+File file = new File ("c:\\test\addressList.txt");
+BufferReader br = new BufferReader (new FileReader(file));
+String s;
+while (s=br.readLine())
+System.out.println(s);
+}
+}
+
+// d.       Write a function to validate an address
+
+  //   i.  A valid address must consist of a numeric postal code, a country, and at least one address line that is not blank or null.
+
+  //   ii. If the country is ZA, then a province is required as well.
+
+public String validate(Address address){
+//If the country is ZA, then a province is required as well.
+Address
+if( address .contains("ZA"){
+address.setProvince(address.getProvince);
+}
+return address;
+}
